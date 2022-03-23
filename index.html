@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Quizz</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=600 height=900 style="width: 600px; height: 900px; background: #231F20"></canvas>
+    <script src="Build/PWA-Quizz-Test.asm.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/PWA-Quizz-Test.data.gz",
+        frameworkUrl: "Build/PWA-Quizz-Test.asm.framework.js.gz",
+        codeUrl: "Build/PWA-Quizz-Test.asm.js.gz",
+        memoryUrl: "Build/PWA-Quizz-Test.asm.mem.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Quizz",
+        productVersion: "1.7.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
